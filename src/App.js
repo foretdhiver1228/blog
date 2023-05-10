@@ -59,7 +59,7 @@ function App() {
         <p>2월 17일 발행</p>
          <hr/>
       </div>
-
+{/* 추후에 배열로 처리하자. 하드코딩 no */}
       {/* props 문법 */}
       <Modal 글제목={ 글제목 }></Modal>
     </div>
