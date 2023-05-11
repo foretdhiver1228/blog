@@ -16,34 +16,34 @@ function App() {
   let fnThumbsUp=()=>{
     cnt변경(cnt += 1)
   }
-  let fnBthClick=()=>{
-    const 새제목 = JSON.parse(JSON.stringify(글제목)); // deep copy
-    // const 새제목 = [...글제목]; 
-    새제목[0] = '강력한 농구슛';
-    글제목변경(새제목)
-  }
+  // let fnBthClick=()=>{
+  //   const 새제목 = JSON.parse(JSON.stringify(글제목)); // deep copy
+  //   // const 새제목 = [...글제목]; 
+  //   새제목[0] = '강력한 농구슛';
+  //   글제목변경(새제목)
+  // }
 
-  let fnSort=()=>{
-    let 새제목2 = [...글제목]; 
+  // let fnSort=()=>{
+  //   let 새제목2 = [...글제목]; 
 
-    if (JSON.stringify(새제목2) === JSON.stringify([...글제목].sort())) {
-      새제목2 = [...글제목].sort().reverse();
-      icon변경('▼');
-    } else {
-      새제목2 = [...글제목].sort();
-      icon변경('▲');
-    }
+  //   if (JSON.stringify(새제목2) === JSON.stringify([...글제목].sort())) {
+  //     새제목2 = [...글제목].sort().reverse();
+  //     icon변경('▼');
+  //   } else {
+  //     새제목2 = [...글제목].sort();
+  //     icon변경('▲');
+  //   }
 
-    글제목변경(새제목2)
-  }
+  //   글제목변경(새제목2)
+  // }
 
   return (
     <div className="App">
       <div className="black-nav"> 
         <div>운동 Blog</div>  
       </div>
-      <button onClick={ fnBthClick }>제목변경</button>
-      <button onClick={ fnSort }>정렬{ icon }</button>
+      {/* <button onClick={ fnBthClick }>제목변경</button>
+      <button onClick={ fnSort }>정렬{ icon }</button> */}
       <div className="list">
         <h3> { 글제목[0] } <span onClick={ fnThumbsUp }>👍</span> { cnt } </h3>
         <p>2월 17일 발행</p>
@@ -59,7 +59,7 @@ function App() {
         <p>2월 17일 발행</p>
          <hr/>
       </div>
-
+      {/* 추후에 배열로 처리하자. 하드코딩 no */}
       {/* props 문법 */}
       <Modal 글제목={ 글제목 }></Modal>
     </div>
